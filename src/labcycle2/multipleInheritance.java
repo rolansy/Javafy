@@ -12,7 +12,9 @@ class student{
 		System.out.print("Enter roll no : ");
 		rollno=sc.nextInt();
 	}
-	
+	void puttno() {
+		System.out.print("RollNo : "+rollno);
+	}
 }
 
 public class multipleInheritance {
