@@ -17,6 +17,19 @@ class student{
 	}
 }
 
+class test extends student{
+	int term1;
+	int term2;
+	void getmarks() {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Term 1 Marks : ");
+		term1=sc.nextInt();
+		System.out.print("Enter Term 2  Marks : ");
+		term2=sc.nextInt();
+	}
+	
+}
+
 public class multipleInheritance {
 	public static void main()
 {}
