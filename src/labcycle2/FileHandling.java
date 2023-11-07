@@ -6,14 +6,17 @@ public class FileHandling {
         FileOutputStream f2=null;
         try{
             f1=new FileInputStream("j.txt");
-            f2= new FileOutputStream("Copy.txt");
+            f2=new FileOutputStream("Copy.txt");
             int c;
             do{
                 c=f1.read();
                 if(c!=-1){
                     f2.write((char)c);
+                    System.out.print((char)c);
                 }
             }while (c!=-1);
+            f1.close();
+            f2.close();
         }
         catch(FileNotFoundException e){
             System.out.println("File not found");
