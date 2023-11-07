@@ -6,26 +6,26 @@ interface Sports{
 }
 
 class student{
-	int rollno;
+	double rollno;
 	void getno() {
 		Scanner sc=new Scanner(System.in);
 		System.out.print("Enter roll no : ");
-		rollno=sc.nextInt();
+		rollno=sc.nextDouble();
 	}
 	void puttno() {
-		System.out.print("RollNo : "+rollno);
+		System.out.println("RollNo : "+rollno);
 	}
 }
 
 class test extends student{
-	int term1;
-	int term2;
+	double term1;
+	double term2;
 	void getmarks() {
-		Scanner sc=new Scanner(System.in);
+		Scanner c=new Scanner(System.in);
 		System.out.print("Enter Term 1 Marks : ");
-		term1=sc.nextInt();
+		term1=c.nextDouble();
 		System.out.print("Enter Term 2  Marks : ");
-		term2=sc.nextInt();
+		term2=c.nextDouble();
 	}
 	void putmarks() {
 		System.out.println("Term 1 Marks : "+term1);

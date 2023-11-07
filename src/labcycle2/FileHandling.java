@@ -5,7 +5,7 @@ public class FileHandling {
         FileInputStream f1=null;
         FileOutputStream f2=null;
         try{
-            f1=new FileInputStream("j.txt");
+            f1=new FileInputStream("jFSD.txt");
             f2=new FileOutputStream("Copy.txt");
             int c;
             do{
