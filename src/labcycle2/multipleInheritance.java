@@ -34,6 +34,20 @@ class test extends student{
 	
 }
 
+class result extends test implements Sports{
+	double total;
+	public void putwt() {
+		System.out.print("Sports Wt : "+sportwt);
+	}
+	void display() {
+		total=term1+term2+sportwt;
+		puttno();
+		putmarks();
+		putwt();
+		System.out.print("Total : "+total);
+	}
+}
+
 public class multipleInheritance {
 	public static void main()
 {}
