@@ -1,6 +1,6 @@
 package labcycle2;
 
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileInputStream;
 
@@ -15,7 +15,12 @@ public class FileHandling {
     	c=f1.read();
     	if (c!=-1) {
     		f2.write((char)c);
-    	}
+    		}
     	}while(c!=-1);
+    }
+    catch (FileNotFoundException e) {
+    	System.out.print("File Not Found");
+    	return;
+    }
     }
 }
