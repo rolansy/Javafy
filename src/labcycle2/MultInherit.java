@@ -28,8 +28,8 @@ class test extends student{
 		term2=sc.nextInt();
 	}
 	void putmarks() {
-		System.out.print("Term 1 Marks : "+term1);
-		System.out.print("Term 2 Marks : "+term2);
+		System.out.println("Term 1 Marks : "+term1);
+		System.out.println("Term 2 Marks : "+term2);
 	}
 	
 }
@@ -37,18 +37,24 @@ class test extends student{
 class result extends test implements Sports{
 	double total;
 	public void putwt() {
-		System.out.print("Sports Wt : "+sportwt);
+		System.out.println("Sports Wt : "+sportwt);
 	}
 	void display() {
 		total=term1+term2+sportwt;
 		puttno();
 		putmarks();
 		putwt();
-		System.out.print("Total : "+total);
+		System.out.println("Total : "+total);
 	}
 }
+public class MultInherit {
 
-public class multipleInheritance {
-	public static void main()
-{}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		result r=new result();
+		r.getno();
+		r.getmarks();
+		r.display();
+	}
+
 }
