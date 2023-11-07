@@ -27,6 +27,10 @@ class test extends student{
 		System.out.print("Enter Term 2  Marks : ");
 		term2=sc.nextInt();
 	}
+	void putmarks() {
+		System.out.print("Term 1 Marks : "+term1);
+		System.out.print("Term 2 Marks : "+term2);
+	}
 	
 }
 
