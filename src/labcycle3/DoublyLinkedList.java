@@ -28,6 +28,30 @@ class DLL{
 		}
 	}
 	
+	public void delete(int key) {
+		Node ptr=head;
+		while(ptr!=null) {
+			if(ptr.data==key) {
+				if (ptr==head) {
+					head=head.rlink;
+					head.llink=null;
+				}
+				
+				
+				else if (ptr==tail) {
+					tail=tail.llink;
+					tail.rlink=null;
+				}
+				else {
+					ptr.llink.rlink=ptr.rlink;
+					ptr.rlink.llink=ptr.llink;
+				}
+				break;
+			}
+			ptr=ptr.rlink;
+		}
+	}
+	
 	 
 }
 
