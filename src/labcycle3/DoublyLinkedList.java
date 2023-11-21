@@ -12,6 +12,23 @@ class DLL{
 		}
 	}
 	
+	Node head,tail;
+	public void insert(int data) {
+		Node newNode=new Node(data);
+		if (head==null) {
+			head=tail=newNode;
+			head.llink=null;
+			tail.rlink=null;
+		}
+		else {
+			tail.rlink=newNode;
+			newNode.llink=tail;
+			tail=newNode;
+			tail.rlink=null;
+		}
+	}
+	
+	 
 }
 
 public class DoublyLinkedList {
