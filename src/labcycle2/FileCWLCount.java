@@ -24,10 +24,7 @@ public class FileCWLCount {
 			w.write	("Number of Lines : "+lc+"\n");
 			w.write("Number of Words : "+wc+"\n");
 			w.write("Number of Characterse : "+cc+"\n");
-			System.out.println("Number of Lines : "+lc);
-			System.out.println("Number of Words : "+wc);
-			System.out.println("Number of Characters : "+cc);
-			
+			System.out.println("Program Executed");
 			r.close();
 			w.close();
 		}
