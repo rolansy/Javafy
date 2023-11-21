@@ -15,9 +15,9 @@ public class FileCWLCount {
 			String l;
 			while((l=r.readLine()) != null) {
 				lc++;
-				String[] words=l.split("");
-				wc=words.length;
-				cc=l.length();
+				String[] words=l.split(" ");
+				wc+=words.length;
+				cc+=l.length();
 				
 			}
 			System.out.println("Number of Lines : "+lc);
