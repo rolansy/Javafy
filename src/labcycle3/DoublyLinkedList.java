@@ -51,7 +51,20 @@ class DLL{
 			ptr=ptr.rlink;
 		}
 	}
-	
+	public void display() {
+		Node ptr=head;
+		if(head==null) {
+			System.out.println("the list is Empty.");
+			return;
+		}
+		System.out.println("Elements of the Doubly Linked List : ");
+		while(ptr!=null) {
+			System.out.print(ptr.data+" ");
+			ptr=ptr.rlink;
+			
+		}
+		System.out.println();
+	}
 	 
 }
 
