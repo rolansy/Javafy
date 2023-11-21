@@ -12,18 +12,17 @@ public class FileHandling {
                 c=f1.read();
                 if(c!=-1){
                     f2.write((char)c);
-                    System.out.print((char)c);
                 }
             }while (c!=-1);
             f1.close();
             f2.close();
         }
         catch(FileNotFoundException e){
-            System.out.println("File not found");
+            System.out.println("File not found : "+e);
             return;
         }
         finally{
-        	System.out.print("FileHandling Executed");
+        	System.out.println("FileHandling Executed");
         }
         
     }
