@@ -1,5 +1,7 @@
 package labcycle3;
 
+import java.util.*;
+
 class DLL{
 	class Node{
 		int data;
@@ -30,6 +32,7 @@ class DLL{
 	
 	public void delete(int key) {
 		Node ptr=head;
+		try {
 		while(ptr!=null) {
 			if(ptr.data==key) {
 				if (ptr==head) {
@@ -49,6 +52,10 @@ class DLL{
 				break;
 			}
 			ptr=ptr.rlink;
+		}
+		}
+		catch(Exception e) {
+			System.out.println();
 		}
 	}
 	public void display() {
@@ -72,6 +79,35 @@ public class DoublyLinkedList {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		DLL dll=new DLL();
+
+		Scanner sc=new Scanner(System.in);
+		System.out.print("1. Insert\n2. Delete\n3. Display\n4. Exit\n");
+		System.out.print("Enter your choice : ");
+		int c=sc.nextInt();
+		while(c!=4) {
+			switch(c) {
+			case 1:
+				System.out.print("Enter the element to be inserted : ");
+				int data=sc.nextInt();
+				dll.insert(data);
+				dll.display();
+				break;
+			case 2:
+				System.out.print("Enter the element to be deleted : ");
+				int key=sc.nextInt();
+				dll.delete(key);
+				dll.display();
+				break;
+			case 3:
+				dll.display();
+				break;
+			default:
+				System.out.println("Invalid Choice");
+			}
+			System.out.print("Enter your choice : ");
+			c=sc.nextInt();
+		}
 
 	}
 
