@@ -5,8 +5,8 @@ public class FileHandling {
         FileInputStream f1=null;
         FileOutputStream f2=null;
         try{
-            f1=new FileInputStream("jFSD.txt");
-            f2=new FileOutputStream("Copy.txt");
+            f1=new FileInputStream("/home/oem/Ronal/Javafy/src/labcycle2/jFSD.txt");
+            f2=new FileOutputStream("/home/oem/Ronal/Javafy/src/labcycle2/Copy.txt");
             int c;
             do{
                 c=f1.read();
