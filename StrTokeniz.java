@@ -1,4 +1,4 @@
-package OOPJPractice;
+package labcycle2;
 
 import java.util.*;
 public class StrTokeniz {
