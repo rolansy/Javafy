@@ -13,6 +13,7 @@ public class StrTokenz{
 		while(st.hasMoreTokens()) {
 			String str=st.nextToken();
 			int n=Integer.parseInt(str);
+			System.out.println(n);
 			sum+=n;
 			
 		}
