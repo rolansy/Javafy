@@ -1,7 +1,15 @@
 package labcycle3;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+
+public class Calcing{
+
+    public static void main(String[] args) {
+        new CalcMain();
+    }
+}
 
 class CalcMain extends JFrame implements ActionListener {
 
@@ -224,10 +232,5 @@ class CalcMain extends JFrame implements ActionListener {
     
 }
 
-public class Calcing{
 
-    public static void main(String[] args) {
-        new CalcMain();
-    }
-}
 
