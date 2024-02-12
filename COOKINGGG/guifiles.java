@@ -46,9 +46,16 @@ public class guifiles extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e){
         String s=e.getActionCommand();
-
+        System.out.println(s);
+        
         if (s.charAt(0)=='^'){
+            
             String fname=jt.getText();
+            if (fname.equals("")){
+                jta.setText("\nInvalid Input");
+                return;
+            }
+            String pr="";
             try{
 
                 BufferedReader r=new BufferedReader(new FileReader(fname+".txt"));
@@ -56,16 +63,18 @@ public class guifiles extends JFrame implements ActionListener {
                 String l;
                 while((l=r.readLine())!=null){
                     wc+=l.length();
-                    System.out.println(l);
 
                 }
-                String pr=("Length of File : "+wc);
+                pr+=("\n Length of File : "+wc);
                 jta.setText(pr);
 
 
             }
             catch(Exception ex){
-                String pr=("File Not Found : \n"+ex);
+                pr=("\nFile Not Found : \n"+ex);
+                jta.setText(pr);
+            }
+            finally{
                 jta.setText(pr);
             }
         }
